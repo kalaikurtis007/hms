@@ -1,0 +1,122 @@
+GET http://localhost:8084/actuator/prometheus
+Accept: text/plain;version=0.0.4;charset=utf-8
+
+<> 2022-06-01T084214.200.txt
+
+###
+
+GET http://localhost:8084/actuator/metrics
+Accept: application/vnd.spring-boot.actuator.v3+json
+
+<> 2022-06-01T084253.200.json
+
+###
+
+GET http://localhost:8084/actuator/scheduledtasks
+Accept: application/vnd.spring-boot.actuator.v3+json
+
+<> 2022-06-01T084338.200.json
+
+###
+
+GET http://localhost:8084/actuator
+Accept: application/vnd.spring-boot.actuator.v3+json
+
+###
+
+GET http://localhost:8084/actuator/beans
+Accept: application/vnd.spring-boot.actuator.v3+json
+
+###
+
+DELETE http://localhost:8084/actuator/caches
+
+###
+
+DELETE http://localhost:8084/actuator/caches/{cache}
+Accept: application/vnd.spring-boot.actuator.v3+json
+
+###
+
+GET http://localhost:8084/actuator/conditions
+Accept: application/vnd.spring-boot.actuator.v3+json
+
+###
+
+GET http://localhost:8084/actuator/configprops
+Accept: application/vnd.spring-boot.actuator.v3+json
+
+###
+
+GET http://localhost:8084/actuator/configprops/{prefix}
+Accept: application/vnd.spring-boot.actuator.v3+json
+
+###
+
+GET http://localhost:8084/actuator/env
+Accept: application/vnd.spring-boot.actuator.v3+json
+
+###
+
+GET http://localhost:8084/actuator/env/{toMatch}
+Accept: application/vnd.spring-boot.actuator.v3+json
+
+###
+
+GET http://localhost:8084/actuator/health
+Accept: application/vnd.spring-boot.actuator.v3+json
+
+###
+
+GET http://localhost:8084/actuator/health/**
+Accept: application/vnd.spring-boot.actuator.v3+json
+
+###
+
+GET http://localhost:8084/actuator/heapdump
+Accept: application/octet-stream
+
+###
+
+GET http://localhost:8084/actuator/info
+Accept: application/vnd.spring-boot.actuator.v3+json
+
+###
+
+GET http://localhost:8084/actuator/loggers
+Accept: application/vnd.spring-boot.actuator.v3+json
+
+###
+
+POST http://localhost:8084/actuator/loggers/{name}
+Content-Type: application/vnd.spring-boot.actuator.v3+json
+
+###
+
+GET http://localhost:8084/actuator/mappings
+Accept: application/vnd.spring-boot.actuator.v3+json
+
+###
+
+GET http://localhost:8084/actuator/metrics/{requiredMetricName}
+Accept: application/vnd.spring-boot.actuator.v3+json
+
+###
+
+GET http://localhost:8084/actuator/threaddump
+Accept: text/plain;charset=UTF-8
+
+###
+
+POST http://localhost:8084/addProv
+
+<> 2022-06-01T085109.400.json
+
+###
+
+GET http://localhost:8084/swagger-ui-custom.html
+
+<> 2022-06-01T085124.200.html
+
+###
+
