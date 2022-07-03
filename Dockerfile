@@ -1,6 +1,9 @@
-FROM adoptopenjdk/openjdk15:ubi
-ENV APP_HOME=/usr/app/
-WORKDIR $APP_HOME
-COPY target/*.jar app.jar
-EXPOSE 8084
-CMD["java",'-jar',"app.jar"]
+FROM openjdk:8-jdk-alpine
+VOLUME /tmp
+ARG JAVA_OPTS
+ENV JAVA_OPTS=$JAVA_OPTS
+COPY target/dharanihospital-0.0.1.jar hms.jar
+EXPOSE 8000
+ENTRYPOINT exec java $JAVA_OPTS -jar hms.jar
+# For Spring-Boot project, use the entrypoint below to reduce Tomcat startup time.
+#ENTRYPOINT exec java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar hms.jar
